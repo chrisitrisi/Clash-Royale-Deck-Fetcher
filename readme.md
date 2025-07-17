@@ -1,45 +1,52 @@
 # Clash Royale Deck Fetcher
 
-Dieses Node.js-Skript ermöglicht es, das zuletzt gespielte PvP-Deck eines Spielers über die Clash Royale API abzurufen. Du gibst einfach Clan-Namen (oder Clan-Tag) sowie den Ingame-Namen des Spielers an, und das Skript listet die acht zuletzt gespielten Karten.
+This Node.js script allows you to fetch the last played PvP deck of a player via the Clash Royale API. Simply provide the clan name (or clan tag) and the player's in-game name, and the script will display the eight cards the player used in their most recent match.
 
-## Voraussetzungen
+## Prerequisites
 
-- Node.js (LTS) installiert
-- Git installiert
-- Ein gültiger Clash Royale API-Key
-- Internetzugriff für API-Requests
+- Node.js (LTS) installed
+- Git installed
+- A valid Clash Royale API key
 
-## Projektstruktur
+## Project Structure
 
 ```
-├── index.js      # Hauptskript
-├── README.md     # Diese Anleitung
-├── .gitignore    # Ignorierte Dateien
-└── package.json  # Projekt-Metadaten
+├── index.js      # Main script
+├── README.md     # This guide
+├── .gitignore    # Ignored files
+└── package.json  # Project metadata
 ```
 
+## Installation
 
-## Abhängigkeiten installieren
+Install the required dependency:
 
-```powershell
+```bash
 npm install @varandas/clash-royale-api
-``` 
-
-## Konfiguration
-
-Lege deinen API-Key in der Umgebungsvariable ab (Windows PowerShell):
-
-```powershell
-setx CR_API_KEY "dein_api_key"
-# danach PowerShell neu starten
 ```
 
-## Nutzung
+## Configuration
+
+Set your API key in an environment variable (Windows PowerShell):
 
 ```powershell
-node index.js 'ClanName' 'SpielerName'
+setx CR_API_KEY "your_api_key_here"
+# Restart PowerShell after setting the variable
 ```
 
+## Usage
 
-Das Skript gibt dir dann das zuletzt gespielte Deck des Spielers aus.
+Run the script in the project folder:
 
+```bash
+node index.js 'ClanName' 'PlayerName'
+```
+
+Examples:
+
+```bash
+node index.js wien chrisitrisi
+node index.js "#990R0VL8" polo077
+```
+
+The script will output the eight cards from the player's most recent PvP deck.
