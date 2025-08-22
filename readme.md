@@ -45,8 +45,8 @@ node index.js 'ClanName' 'PlayerName'
 Examples:
 
 ```bash
-node index.js wien chrisitrisi
-node index.js "#990R0VL8" polo077
+node deck.js wien chrisitrisi
+node deck.js "#990R0VL8" polo077
 ```
 
 The script will output the eight cards from the player's most recent PvP deck.
